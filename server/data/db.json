@@ -1,0 +1,232 @@
+{
+  "cvs": [
+    {
+      "id": "cv-jean-dupont",
+      "meta": {
+        "name": "CV Tech Lead",
+        "createdAt": "2026-06-01T09:00:00.000Z",
+        "updatedAt": "2026-07-20T17:47:16.926Z"
+      },
+      "personalInfo": {
+        "fullName": "Jean Dupont",
+        "title": "Senior Project Manager / Tech Lead",
+        "phone": "+33 6 12 34 56 78",
+        "email": "jean.dupont@email.com",
+        "address": "Paris, France",
+        "yearsOfExperience": 12,
+        "photoUrl": ""
+      },
+      "experiences": [
+        {
+          "id": "exp-1",
+          "position": "Senior Project Manager / Tech Lead",
+          "company": "TechFlow Solutions",
+          "city": "Paris",
+          "country": "France",
+          "startDate": "2020-01",
+          "endDate": "",
+          "current": true,
+          "missions": [
+            {
+              "id": "exp-1-m1",
+              "text": "Direction technique d'une équipe de 15 ingénieurs sur le développement d'une plateforme SaaS de gestion de flux logistiques."
+            },
+            {
+              "id": "exp-1-m2",
+              "text": "Optimisation de l'infrastructure Cloud AWS, réduisant les coûts opérationnels de 30% tout en augmentant la disponibilité à 99.9%."
+            },
+            {
+              "id": "exp-1-m3",
+              "text": "Mise en œuvre de la méthodologie Agile/Scrum et accélération du cycle de release de 50% via l'automatisation CI/CD."
+            }
+          ]
+        },
+        {
+          "id": "exp-2",
+          "position": "Chef de Projet Technique Backend",
+          "company": "Innovatech Group",
+          "city": "Lyon",
+          "country": "France",
+          "startDate": "2016-03",
+          "endDate": "2019-12",
+          "current": false,
+          "missions": [
+            {
+              "id": "exp-2-m1",
+              "text": "Conception et développement d'architectures microservices hautement scalables en Python et PostgreSQL."
+            },
+            {
+              "id": "exp-2-m2",
+              "text": "Gestion de la migration complète d'un monolithe vers une architecture distribuée sous Docker."
+            },
+            {
+              "id": "exp-2-m3",
+              "text": "Supervision des audits de sécurité et mise en conformité RGPD pour les données clients."
+            }
+          ]
+        },
+        {
+          "id": "exp-3",
+          "position": "Développeur Fullstack Senior",
+          "company": "WebSphere Agency",
+          "city": "Paris",
+          "country": "France",
+          "startDate": "2012-08",
+          "endDate": "2016-02",
+          "current": false,
+          "missions": [
+            {
+              "id": "exp-3-m1",
+              "text": "Développement d'interfaces web réactives complexes en React et intégration d'API REST robustes."
+            },
+            {
+              "id": "exp-3-m2",
+              "text": "Collaboration directe avec les équipes Produit et Design pour la définition des parcours utilisateurs."
+            }
+          ]
+        }
+      ],
+      "skillsTable": [
+        {
+          "id": "skill-1",
+          "category": "Backend",
+          "technologies": [
+            "Node.js",
+            "Django",
+            "FastAPI",
+            "Go"
+          ]
+        },
+        {
+          "id": "skill-2",
+          "category": "Frontend",
+          "technologies": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "Vue.js"
+          ]
+        },
+        {
+          "id": "skill-3",
+          "category": "Langages",
+          "technologies": [
+            "Python",
+            "TypeScript",
+            "SQL",
+            "Bash"
+          ]
+        },
+        {
+          "id": "skill-4",
+          "category": "Cloud & DevOps",
+          "technologies": [
+            "AWS (EC2, S3, RDS, Lambda)",
+            "Terraform",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "hardSkills": [
+        {
+          "id": "hard-1",
+          "label": "Python"
+        },
+        {
+          "id": "hard-2",
+          "label": "TypeScript"
+        },
+        {
+          "id": "hard-3",
+          "label": "React"
+        },
+        {
+          "id": "hard-4",
+          "label": "Docker"
+        },
+        {
+          "id": "hard-5",
+          "label": "AWS"
+        },
+        {
+          "id": "hard-6",
+          "label": "PostgreSQL"
+        },
+        {
+          "id": "hard-7",
+          "label": "Git"
+        }
+      ],
+      "softSkills": [
+        {
+          "id": "soft-1",
+          "label": "Communication"
+        },
+        {
+          "id": "soft-2",
+          "label": "Leadership"
+        },
+        {
+          "id": "soft-3",
+          "label": "Esprit d'équipe"
+        },
+        {
+          "id": "soft-4",
+          "label": "Résolution de problèmes"
+        }
+      ],
+      "education": [
+        {
+          "id": "edu-1",
+          "institution": "École Centrale d'Électronique (ECE)",
+          "city": "Paris",
+          "degree": "Master",
+          "field": "Ingénierie Logicielle",
+          "graduationDate": "2012"
+        },
+        {
+          "id": "edu-2",
+          "institution": "Université Pierre et Marie Curie",
+          "city": "Paris",
+          "degree": "Licence",
+          "field": "Informatique",
+          "graduationDate": "2010"
+        }
+      ],
+      "languages": [
+        {
+          "id": "lang-1",
+          "name": "Français",
+          "level": "Langue maternelle",
+          "proficiency": 100
+        },
+        {
+          "id": "lang-2",
+          "name": "Anglais",
+          "level": "Professionnel (C1)",
+          "proficiency": 85
+        },
+        {
+          "id": "lang-3",
+          "name": "Espagnol",
+          "level": "Intermédiaire",
+          "proficiency": 55
+        }
+      ],
+      "customization": {
+        "template": "modern",
+        "primaryColor": "#2563EB",
+        "fontFamily": "Inter",
+        "sectionOrder": [
+          "experiences",
+          "skillsTable",
+          "hardSkills",
+          "softSkills",
+          "education",
+          "languages"
+        ],
+        "hiddenSections": []
+      }
+    }
+  ]
+}
