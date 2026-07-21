@@ -6,7 +6,7 @@ import { Skeleton } from "@/shared/components/ui/skeleton";
 import { EmptyState } from "@/shared/components/EmptyState";
 import { FileWarning } from "lucide-react";
 import { PreviewFrame } from "@/features/cv-preview/components/PreviewFrame";
-import { HiddenPdfExport } from "@/features/cv-preview/components/HiddenPdfExport";
+import { PrintableCv } from "@/features/cv-preview/components/PrintableCv";
 import { EditorToolbar } from "./components/EditorToolbar";
 import { EditorNav } from "./components/EditorNav";
 import { EditorSectionContent } from "./components/EditorSectionContent";
@@ -70,7 +70,7 @@ export function EditorPage() {
         </div>
       </div>
 
-      {exportingCv && <HiddenPdfExport cv={exportingCv} onDone={() => setExportingCv(null)} />}
+      {exportingCv && <PrintableCv cv={exportingCv} onDone={() => setExportingCv(null)} />}
     </div>
   );
 }

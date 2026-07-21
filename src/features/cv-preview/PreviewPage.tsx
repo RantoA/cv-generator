@@ -6,7 +6,7 @@ import { Button } from "@/shared/components/ui/button";
 import { Skeleton } from "@/shared/components/ui/skeleton";
 import { EmptyState } from "@/shared/components/EmptyState";
 import { PreviewFrame } from "./components/PreviewFrame";
-import { HiddenPdfExport } from "./components/HiddenPdfExport";
+import { PrintableCv } from "./components/PrintableCv";
 
 /** Page d'aperçu épurée (ouverte dans un nouvel onglet) : uniquement le CV et le bouton d'export, sans chrome applicatif. */
 export function PreviewPage() {
@@ -44,7 +44,7 @@ export function PreviewPage() {
         <PreviewFrame cv={cv} />
       </main>
 
-      {isExporting && <HiddenPdfExport cv={cv} onDone={() => setIsExporting(false)} />}
+      {isExporting && <PrintableCv cv={cv} onDone={() => setIsExporting(false)} />}
     </div>
   );
 }

@@ -11,7 +11,7 @@ import { DashboardToolbar } from "./components/DashboardToolbar";
 import { CvGrid } from "./components/CvGrid";
 import { Pagination } from "./components/Pagination";
 import { useCvListPage } from "./hooks/useCvListPage";
-import { HiddenPdfExport } from "@/features/cv-preview/components/HiddenPdfExport";
+import { PrintableCv } from "@/features/cv-preview/components/PrintableCv";
 
 export function DashboardPage() {
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ export function DashboardPage() {
         onConfirm={() => cvToDelete && deleteCv.mutate(cvToDelete.id)}
       />
 
-      {cvToExport && <HiddenPdfExport cv={cvToExport} onDone={() => setCvToExport(null)} />}
+      {cvToExport && <PrintableCv cv={cvToExport} onDone={() => setCvToExport(null)} />}
     </div>
   );
 }

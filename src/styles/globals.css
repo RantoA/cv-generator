@@ -86,3 +86,19 @@
     scrollbar-width: thin;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    /* Doit rester synchronisé avec MARGIN_V_MM / MARGIN_H_MM (src/utils/page.ts). */
+    margin: 20mm 15mm;
+  }
+
+  /* Le CV imprimable est porté (via portail React) directement dans <body>, hors de #root.
+     Ne masquer #root que pendant un export déclenché par le bouton (classe posée par
+     PrintableCv) : un Ctrl+P « brut » ailleurs dans l'appli doit imprimer normalement,
+     jamais une page blanche. */
+  body.printable-cv-active #root {
+    display: none;
+  }
+}

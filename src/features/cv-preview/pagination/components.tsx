@@ -13,7 +13,6 @@ export const Page = forwardRef<HTMLDivElement, { children: ReactNode; className?
   ({ children, className }, ref) => (
     <div
       ref={ref}
-      data-pdf-page
       className={cn("relative overflow-hidden bg-white text-[#1F2937]", className)}
       style={{
         width: A4_WIDTH_PX,
