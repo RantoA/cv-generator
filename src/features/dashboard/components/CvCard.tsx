@@ -55,7 +55,9 @@ export function CvCard({ cv, onDuplicate, onDelete, onExportPdf }: CvCardProps) 
             <DropdownMenuItem onClick={() => navigate(`/cv/${cv.id}/edit`)}>
               <Pencil /> Modifier
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => navigate(`/cv/${cv.id}/preview`)}>
+            <DropdownMenuItem
+              onClick={() => window.open(`/cv/${cv.id}/preview`, "_blank", "noopener,noreferrer")}
+            >
               <Eye /> Aperçu
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => onDuplicate(cv)}>

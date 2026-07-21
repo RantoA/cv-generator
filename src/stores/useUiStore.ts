@@ -15,17 +15,14 @@ function getSystemTheme(): Theme {
 
 interface UiState {
   theme: Theme;
-  isFullscreenPreview: boolean;
   toggleTheme: () => void;
   setTheme: (theme: Theme) => void;
-  setFullscreenPreview: (value: boolean) => void;
 }
 
 export const useUiStore = create<UiState>()(
   persist(
     (set, get) => ({
       theme: getSystemTheme(),
-      isFullscreenPreview: false,
       toggleTheme: () => {
         const next: Theme = get().theme === "light" ? "dark" : "light";
         applyThemeClass(next);
@@ -35,7 +32,6 @@ export const useUiStore = create<UiState>()(
         applyThemeClass(theme);
         set({ theme });
       },
-      setFullscreenPreview: (value) => set({ isFullscreenPreview: value }),
     }),
     {
       name: "cv-generator-ui",

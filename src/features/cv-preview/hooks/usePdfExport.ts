@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { toast } from "sonner";
-import { exportNodeToPdf } from "../export/exportToPdf";
+import { exportContainerToPdf } from "../export/exportToPdf";
 
 export function usePdfExport(fileName: string) {
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -10,7 +10,7 @@ export function usePdfExport(fileName: string) {
     if (!nodeRef.current) return;
     setIsExporting(true);
     try {
-      await exportNodeToPdf(nodeRef.current, fileName);
+      await exportContainerToPdf(nodeRef.current, fileName);
       toast.success("PDF téléchargé.");
     } catch {
       toast.error("Échec de l'export PDF.");

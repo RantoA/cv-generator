@@ -11,12 +11,11 @@ import { cn } from "@/lib/utils";
 
 interface EditorToolbarProps {
   autosaveStatus: AutosaveStatus;
-  onOpenFullscreen: () => void;
   onExportPdf: () => void;
   isExporting: boolean;
 }
 
-export function EditorToolbar({ autosaveStatus, onOpenFullscreen, onExportPdf, isExporting }: EditorToolbarProps) {
+export function EditorToolbar({ autosaveStatus, onExportPdf, isExporting }: EditorToolbarProps) {
   const navigate = useNavigate();
   const draft = useCvEditorStore((s) => s.draft as Cv);
   const updateDraft = useCvEditorStore((s) => s.updateDraft);
@@ -71,7 +70,11 @@ export function EditorToolbar({ autosaveStatus, onOpenFullscreen, onExportPdf, i
           {autosaveStatus === "error" && "Échec de l'enregistrement"}
         </span>
 
-        <Button variant="outline" size="sm" onClick={onOpenFullscreen}>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => window.open(`/cv/${draft.id}/preview`, "_blank", "noopener,noreferrer")}
+        >
           <Maximize2 /> Aperçu
         </Button>
         <Button size="sm" onClick={onExportPdf} disabled={isExporting}>

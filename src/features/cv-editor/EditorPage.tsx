@@ -6,7 +6,6 @@ import { Skeleton } from "@/shared/components/ui/skeleton";
 import { EmptyState } from "@/shared/components/EmptyState";
 import { FileWarning } from "lucide-react";
 import { PreviewFrame } from "@/features/cv-preview/components/PreviewFrame";
-import { FullscreenPreview } from "@/features/cv-preview/components/FullscreenPreview";
 import { HiddenPdfExport } from "@/features/cv-preview/components/HiddenPdfExport";
 import { EditorToolbar } from "./components/EditorToolbar";
 import { EditorNav } from "./components/EditorNav";
@@ -24,7 +23,6 @@ export function EditorPage() {
   const undoRedoVersion = useCvEditorStore((s) => s.undoRedoVersion);
 
   const [activeSection, setActiveSection] = useState<EditorSectionId>("personalInfo");
-  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
   const [exportingCv, setExportingCv] = useState<Cv | null>(null);
 
   const autosaveStatus = useAutosave(id);
@@ -56,7 +54,6 @@ export function EditorPage() {
     <div className="flex min-h-screen flex-col">
       <EditorToolbar
         autosaveStatus={autosaveStatus}
-        onOpenFullscreen={() => setIsFullscreenOpen(true)}
         onExportPdf={() => setExportingCv(draft)}
         isExporting={Boolean(exportingCv)}
       />
@@ -73,7 +70,6 @@ export function EditorPage() {
         </div>
       </div>
 
-      <FullscreenPreview cv={draft} open={isFullscreenOpen} onOpenChange={setIsFullscreenOpen} />
       {exportingCv && <HiddenPdfExport cv={exportingCv} onDone={() => setExportingCv(null)} />}
     </div>
   );

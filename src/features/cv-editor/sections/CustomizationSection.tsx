@@ -4,7 +4,7 @@ import { Label } from "@/shared/components/ui/label";
 import { Switch } from "@/shared/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/shared/components/ui/select";
 import { SortableList, DragHandle } from "@/shared/components/SortableList";
-import { CV_TEMPLATES } from "@/features/cv-preview/templates/CvRenderer";
+import { CV_TEMPLATES } from "@/features/cv-preview/templates";
 import { SECTION_LABELS, type Cv, type SectionKey } from "@/types/cv.types";
 import { cn } from "@/lib/utils";
 
