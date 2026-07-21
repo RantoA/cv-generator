@@ -63,31 +63,31 @@ export function buildCvEntries(cv: Cv): Entry[] {
           <p className="mt-0.5 text-[12px] font-bold uppercase tracking-wide" style={{ color: primary }}>
             {personalInfo.title || "Titre professionnel"}
           </p>
-          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px]" style={{ color: SUB }}>
+          <div className="mt-2 space-y-1 text-[11px]" style={{ color: SUB }}>
+            {personalInfo.yearsOfExperience > 0 && (
+              <div className="flex items-center gap-1">
+                <Calendar size={12} style={{ color: primary }} /> {personalInfo.yearsOfExperience} ans d&apos;expérience
+              </div>
+            )}
             {personalInfo.address && (
-              <span className="inline-flex items-center gap-1">
+              <div className="flex items-center gap-1">
                 <MapPin size={12} style={{ color: primary }} /> {personalInfo.address}
-              </span>
+              </div>
             )}
             {personalInfo.email && (
-              <span className="inline-flex items-center gap-1">
+              <div className="flex items-center gap-1">
                 <Mail size={12} style={{ color: primary }} /> {personalInfo.email}
-              </span>
+              </div>
             )}
             {personalInfo.phone && (
-              <span className="inline-flex items-center gap-1">
+              <div className="flex items-center gap-1">
                 <Phone size={12} style={{ color: primary }} /> {personalInfo.phone}
-              </span>
+              </div>
             )}
           </div>
-          {personalInfo.yearsOfExperience > 0 && (
-            <div className="mt-1 flex items-center gap-1 text-[11px]" style={{ color: SUB }}>
-              <Calendar size={12} style={{ color: primary }} /> {personalInfo.yearsOfExperience} ans d&apos;expérience
-            </div>
-          )}
         </div>
         <div
-          className="flex size-[72px] shrink-0 items-center justify-center overflow-hidden rounded-xl text-[15px] font-bold"
+          className="flex h-[150px] w-[120px] shrink-0 items-center justify-center overflow-hidden rounded-xl text-[22px] font-bold"
           style={{ border: `1px solid ${BORDER}`, background: BG2, color: SUB }}
         >
           {personalInfo.photoUrl ? (
