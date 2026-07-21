@@ -20,7 +20,7 @@ import { getInitials } from "@/utils/text";
 const INK = "#1F2937";
 const SUB = "#6B7280";
 const BORDER = "#E5E7EB";
-const BG2 = "#F8FAFC";
+const BG2 = "#FFFFFF";
 
 const SECTION_META: Record<SectionKey, { icon: LucideIcon; label: string }> = {
   experiences: { icon: Briefcase, label: "Expériences professionnelles" },
@@ -163,7 +163,10 @@ export function buildCvEntries(cv: Cv): Entry[] {
               className="grid grid-cols-[170px_1fr] overflow-hidden rounded-md"
               style={{ border: `1px solid ${BORDER}` }}
             >
-              <div className="px-3 py-2 text-[12px] font-medium" style={{ color: INK, background: BG2 }}>
+              <div
+                className="px-3 py-2 text-[12px] font-medium"
+                style={{ color: INK, background: BG2, borderRight: `1px solid ${BORDER}` }}
+              >
                 {row.category}
               </div>
               <div className="px-3 py-2 text-[12px]" style={{ color: SUB }}>
@@ -248,18 +251,13 @@ export function buildCvEntries(cv: Cv): Entry[] {
           sectionId: key,
           keepWithNext: false,
           render: () => (
-            <div>
-              <div className="mb-1 flex items-baseline justify-between">
-                <span className="text-[12px] font-medium" style={{ color: INK }}>
-                  {lang.name}
-                </span>
-                <span className="text-[11px] italic" style={{ color: SUB }}>
-                  {lang.level}
-                </span>
-              </div>
-              <div className="h-1.5 overflow-hidden rounded-full" style={{ background: BORDER }}>
-                <div className="h-full rounded-full" style={{ width: `${lang.proficiency}%`, background: primary }} />
-              </div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-[12px] font-medium" style={{ color: INK }}>
+                {lang.name}
+              </span>
+              <span className="text-[11px]" style={{ color: SUB }}>
+                — {lang.level}
+              </span>
             </div>
           ),
         });

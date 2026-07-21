@@ -90,8 +90,9 @@
 @media print {
   @page {
     size: A4;
-    /* Doit rester synchronisé avec MARGIN_V_MM / MARGIN_H_MM (src/utils/page.ts). */
-    margin: 20mm 15mm;
+    /* Marge de 2 cm en haut/bas de chaque page imprimée ; marge horizontale alignée sur
+       MARGIN_H_MM (src/utils/page.ts). */
+    margin: 10mm 15mm;
   }
 
   /* Le CV imprimable est porté (via portail React) directement dans <body>, hors de #root.
@@ -100,5 +101,10 @@
      jamais une page blanche. */
   body.printable-cv-active #root {
     display: none;
+  }
+
+  /* Fond de page 100 % blanc à l'export (le body de l'appli est gris clair). */
+  body.printable-cv-active {
+    background: #ffffff;
   }
 }
